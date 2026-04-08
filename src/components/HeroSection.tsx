@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Eye } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -25,15 +26,20 @@ const HeroSection = () => (
         Printing, signage & branding solutions for modern businesses. We deliver quality that speaks for itself.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
-        <Button size="lg" className="gradient-orange text-accent-foreground font-semibold text-lg px-8 hover:opacity-90 transition-opacity">
-          Get a Free Quote <ArrowRight className="ml-2" size={20} />
+        <Button asChild size="lg" className="gradient-orange text-accent-foreground font-semibold text-lg px-8 hover:opacity-90 transition-opacity">
+          <Link to="/contact">
+            Contact Us <ArrowRight className="ml-2" size={20} />
+          </Link>
         </Button>
         <Button
+          asChild
           size="lg"
           variant="outline"
           className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-semibold text-lg px-8"
         >
-          <Eye className="mr-2" size={20} /> View Portfolio
+          <Link to="/portfolio">
+            <Eye className="mr-2" size={20} /> View Portfolio
+          </Link>
         </Button>
       </div>
     </div>

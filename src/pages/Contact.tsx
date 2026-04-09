@@ -24,10 +24,10 @@ const serviceOptions = [
   "Wall Graphics",
   "Branding Solutions",
   "Flex Printing",
+  "Vinyl Printing",
+  "CNC Cutting",
   "LED Sign Boards",
-  "Event Branding",
-  "Fabric Printing",
-  "Digital Displays",
+  "Specialized Electrical Panel",
   "Other",
 ];
 

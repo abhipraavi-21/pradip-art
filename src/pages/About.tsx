@@ -92,10 +92,15 @@ const About = () => (
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((s) => (
-              <div key={s.num} className="text-center">
-                <span className="text-5xl font-extrabold text-accent/30">{s.num}</span>
-                <h3 className="text-lg font-bold text-primary-foreground mt-2 mb-2">{s.title}</h3>
-                <p className="text-primary-foreground/70 text-sm">{s.desc}</p>
+              <div
+                key={s.num}
+                className="text-center rounded-xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 shadow-[0_14px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm"
+              >
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground text-xl font-extrabold">
+                  {s.num}
+                </span>
+                <h3 className="text-xl font-bold text-primary-foreground mt-4 mb-2">{s.title}</h3>
+                <p className="text-primary-foreground/90 text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>

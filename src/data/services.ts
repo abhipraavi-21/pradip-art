@@ -1,13 +1,13 @@
-import { Printer, Signpost, PaintBucket, Megaphone, Layers, Lightbulb, PartyPopper, Shirt, Monitor, LucideIcon } from "lucide-react";
+import { Printer, Signpost, PaintBucket, Megaphone, Layers, Lightbulb, Cpu, Cog, LucideIcon } from "lucide-react";
 import printing1 from "@/assets/portfolio/printing-1.jpg";
-import printing2 from "@/assets/portfolio/printing-2.jpg";
 import signage1 from "@/assets/portfolio/signage-1.jpg";
 import signage2 from "@/assets/portfolio/signage-2.jpg";
 import branding1 from "@/assets/portfolio/branding-1.jpg";
-import events1 from "@/assets/portfolio/events-1.jpg";
+import specializedElectricalPanel from "@/assets/portfolio/specialized-electrical-panel.jpg";
+import vinylPrinting from "@/assets/portfolio/vinyl-printing.jpg";
+import cncCutting from "@/assets/portfolio/cnc-cutting.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import teamImg from "@/assets/team.jpg";
-import servicesBanner from "@/assets/services-banner.jpg";
 
 export interface ServiceData {
   slug: string;
@@ -97,6 +97,36 @@ export const servicesData: ServiceData[] = [
     ],
   },
   {
+    slug: "vinyl-printing",
+    icon: Printer,
+    image: vinylPrinting,
+    title: "Vinyl Printing",
+    shortDesc: "High-quality vinyl prints for branding, ads, and displays",
+    fullDesc: "Our vinyl printing service delivers sharp, durable visuals for indoor and outdoor use. We use premium vinyl media and high-resolution printers to produce long-lasting prints suitable for branding, promotional campaigns, and storefront applications.",
+    subServices: ["Self-Adhesive Vinyl", "One-Way Vision Vinyl", "Reflective Vinyl", "Transparent Vinyl Prints", "Frosted Vinyl", "Lamination & Installation"],
+    process: [
+      { step: "Artwork Check", desc: "We review your design files for resolution, bleed, and color accuracy." },
+      { step: "Material Selection", desc: "Selecting the right vinyl type based on surface, durability, and usage." },
+      { step: "Precision Printing", desc: "High-resolution eco-solvent/UV printing for rich color and sharp details." },
+      { step: "Finishing & Fitment", desc: "Trimming, lamination, and professional installation support when required." },
+    ],
+  },
+  {
+    slug: "cnc-cutting",
+    icon: Cog,
+    image: cncCutting,
+    title: "CNC Cutting",
+    shortDesc: "Precision CNC cutting for acrylic, wood, metal, and composite sheets",
+    fullDesc: "Our CNC cutting service delivers high-precision component and sheet cutting for signage, fabrication, and custom production needs. With computer-controlled machining and experienced operators, we ensure clean edges, repeatable accuracy, and fast turnaround for both prototypes and bulk jobs.",
+    subServices: ["CNC Router Cutting", "Acrylic & ACP Cutting", "Metal Sheet Profile Cutting", "Custom Shape Cutting", "Prototype Development", "Batch Production"],
+    process: [
+      { step: "File & Requirement Review", desc: "We check drawing format, dimensions, tolerances, and material specifications." },
+      { step: "Toolpath Planning", desc: "Selecting tooling, feed rates, and cutting path for accuracy and efficiency." },
+      { step: "CNC Machining", desc: "Automated precision cutting with calibrated machines and real-time supervision." },
+      { step: "Finishing & Dispatch", desc: "Edge cleanup, quality checks, and safe packing for delivery or installation." },
+    ],
+  },
+  {
     slug: "led-sign-boards",
     icon: Lightbulb,
     image: heroBg,
@@ -112,48 +142,18 @@ export const servicesData: ServiceData[] = [
     ],
   },
   {
-    slug: "event-branding",
-    icon: PartyPopper,
-    image: events1,
-    title: "Event Branding",
-    shortDesc: "End-to-end event branding & promotional material",
-    fullDesc: "Make your events unforgettable with our comprehensive event branding services. From stage backdrops and booth graphics to promotional materials and directional signage, we handle every visual element to create a cohesive, impactful event experience.",
-    subServices: ["Stage Backdrops", "Exhibition Booths", "Roll-Up Banners", "Promotional Flags", "Table Runners", "Badge Printing"],
+    slug: "specialized-electrical-panel",
+    icon: Cpu,
+    image: specializedElectricalPanel,
+    title: "Specialized Electrical Panel",
+    shortDesc: "Custom electrical panels for safe and reliable power distribution",
+    fullDesc: "We design and build specialized electrical panels for industrial, commercial, and infrastructure applications. From control panels to power distribution panels, every unit is engineered for safety, durability, and performance with quality components and clean panel wiring standards.",
+    subServices: ["Control Panels", "Power Distribution Panels", "Motor Control Panels (MCC)", "APFC Panels", "PLC Panels", "Panel Installation & Testing"],
     process: [
-      { step: "Event Brief", desc: "Understanding event theme, venue, timeline, and branding requirements." },
-      { step: "Creative Design", desc: "Designing cohesive visual elements that align with your event theme." },
-      { step: "Production", desc: "Fast-track printing and fabrication to meet event deadlines." },
-      { step: "On-Site Setup", desc: "Professional installation and teardown at the event venue." },
-    ],
-  },
-  {
-    slug: "fabric-printing",
-    icon: Shirt,
-    image: servicesBanner,
-    title: "Fabric Printing",
-    shortDesc: "Premium fabric prints for exhibitions & retail",
-    fullDesc: "Elevate your displays with our premium fabric printing services. Lightweight, wrinkle-resistant, and vibrant — our fabric prints are perfect for trade shows, retail environments, and corporate spaces. We offer dye-sublimation printing on a wide range of fabrics.",
-    subServices: ["Tension Fabric Displays", "Fabric Banners", "Tablecloths", "Flag Printing", "Textile Backdrops", "Silicone Edge Graphics"],
-    process: [
-      { step: "Material Consultation", desc: "Selecting the ideal fabric type for your application and budget." },
-      { step: "Color Proofing", desc: "Digital color proofing to ensure accurate brand color reproduction." },
-      { step: "Dye-Sublimation", desc: "Using advanced dye-sub technology for permanent, wash-resistant prints." },
-      { step: "Finishing", desc: "Professional sewing, hemming, and hardware assembly for display-ready products." },
-    ],
-  },
-  {
-    slug: "digital-displays",
-    icon: Monitor,
-    image: printing2,
-    title: "Digital Displays",
-    shortDesc: "Modern digital signage & display solutions",
-    fullDesc: "Future-proof your communication with dynamic digital display solutions. From interactive kiosks to video walls, we provide complete digital signage systems that engage audiences with dynamic content, real-time updates, and interactive experiences.",
-    subServices: ["Video Walls", "Interactive Kiosks", "Digital Menu Boards", "Outdoor LED Screens", "Touchscreen Displays", "Content Management"],
-    process: [
-      { step: "Needs Assessment", desc: "Evaluating your space, audience, and content requirements for the right solution." },
-      { step: "System Design", desc: "Specifying hardware, software, and network infrastructure for optimal performance." },
-      { step: "Hardware Setup", desc: "Professional installation with mounting, wiring, and network configuration." },
-      { step: "Content & Training", desc: "Setting up content management and training your team on the system." },
+      { step: "Requirement Study", desc: "Understanding load, application, standards, and site conditions before design." },
+      { step: "Panel Design", desc: "Preparing SLD/layout, selecting components, and defining safety protections." },
+      { step: "Assembly & Wiring", desc: "Precision fabrication, busbar mounting, and structured wiring with labeling." },
+      { step: "Testing & Commissioning", desc: "Pre-dispatch testing, on-site installation, and commissioning support." },
     ],
   },
 ];

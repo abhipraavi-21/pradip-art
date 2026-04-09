@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,9 +21,12 @@ const quoteServiceOptions = [
   "Large Format Printing",
   "Signage",
   "Wall Graphics",
-  "LED Sign Boards",
-  "Event Branding",
   "Branding Solutions",
+  "Flex Printing",
+  "Vinyl Printing",
+  "CNC Cutting",
+  "LED Sign Boards",
+  "Specialized Electrical Panel",
   "Other",
 ];
 
@@ -60,11 +64,7 @@ const Header = () => {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 gradient-navy backdrop-blur-sm">
         <div className="container-wide flex items-center justify-between h-16 md:h-20 px-4 md:px-8">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl md:text-3xl font-heading font-extrabold text-accent">
-              Pradip<span className="text-primary-foreground"> Arts</span>
-            </span>
-          </Link>
+          <BrandLogo compact className="shrink-0" />
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">

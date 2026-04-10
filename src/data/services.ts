@@ -3,7 +3,7 @@ import printing1 from "@/assets/portfolio/printing-1.jpg";
 import signage1 from "@/assets/portfolio/signage-1.jpg";
 import signage2 from "@/assets/portfolio/signage-2.jpg";
 import branding1 from "@/assets/portfolio/branding-1.jpg";
-import alcoCompositPanal from "@/assets/portfolio/alco-composit-panal.jpg";
+import alcoCompositPanal from "@/assets/portfolio/alco-composit-panal-whatsapp-cropped.jpeg";
 import vinylPrinting from "@/assets/portfolio/vinyl-printing.jpg";
 import cncCutting from "@/assets/portfolio/cnc-cutting.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -13,6 +13,7 @@ export interface ServiceData {
   slug: string;
   icon: LucideIcon;
   image: string;
+  cardImagePosition?: string;
   title: string;
   shortDesc: string;
   fullDesc: string;
@@ -145,6 +146,7 @@ export const servicesData: ServiceData[] = [
     slug: "alco-composit-panal",
     icon: Cpu,
     image: alcoCompositPanal,
+    cardImagePosition: "center top",
     title: "Alco composit panal",
     shortDesc: "ACP cladding and panel solutions for stylish, durable interior and exterior finishes",
     fullDesc: "We provide Alco composit panal solutions for storefronts, building facades, office exteriors, and interior feature surfaces. Our team handles panel selection, precision cutting, framing, and clean installation to deliver a modern finish that is lightweight, weather-resistant, and built to last.",

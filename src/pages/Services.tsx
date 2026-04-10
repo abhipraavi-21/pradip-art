@@ -23,7 +23,7 @@ const Services = () => (
       <section className="section-padding">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.map(({ slug, image, title, shortDesc, subServices }) => (
+            {servicesData.map(({ slug, image, cardImagePosition, title, shortDesc, subServices }) => (
               <div key={slug} className="bg-card border border-border rounded-lg overflow-hidden hover-lift group">
                 <div className="gradient-navy p-6">
                   <div className="mb-4 relative rounded-lg overflow-hidden border border-primary-foreground/15 bg-navy-dark">
@@ -31,7 +31,8 @@ const Services = () => (
                       src={image}
                       alt={title}
                       loading="lazy"
-                      className="w-full h-44 object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ objectPosition: cardImagePosition }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent" />
                     <h3 className="absolute bottom-3 left-4 right-4 text-xl font-bold text-primary-foreground leading-tight">

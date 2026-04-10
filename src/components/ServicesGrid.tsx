@@ -9,7 +9,7 @@ const ServicesGrid = () => (
         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">Our Services</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {servicesData.map(({ slug, image, title, shortDesc }) => (
+        {servicesData.map(({ slug, image, cardImagePosition, title, shortDesc }) => (
           <Link
             key={slug}
             to={`/services/${slug}`}
@@ -19,7 +19,8 @@ const ServicesGrid = () => (
               src={image}
               alt={title}
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              style={{ objectPosition: cardImagePosition }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/95 via-navy-dark/45 to-navy-dark/20" />
             <div className="absolute inset-x-0 bottom-0 p-5">

@@ -3,7 +3,7 @@ import printing1 from "@/assets/portfolio/printing-1.jpg";
 import signage1 from "@/assets/portfolio/signage-1.jpg";
 import signage2 from "@/assets/portfolio/signage-2.jpg";
 import branding1 from "@/assets/portfolio/branding-1.jpg";
-import specializedElectricalPanel from "@/assets/portfolio/specialized-electrical-panel.jpg";
+import alcoCompositPanal from "@/assets/portfolio/alco-composit-panal.jpg";
 import vinylPrinting from "@/assets/portfolio/vinyl-printing.jpg";
 import cncCutting from "@/assets/portfolio/cnc-cutting.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -142,18 +142,18 @@ export const servicesData: ServiceData[] = [
     ],
   },
   {
-    slug: "specialized-electrical-panel",
+    slug: "alco-composit-panal",
     icon: Cpu,
-    image: specializedElectricalPanel,
-    title: "Specialized Electrical Panel",
-    shortDesc: "Custom electrical panels for safe and reliable power distribution",
-    fullDesc: "We design and build specialized electrical panels for industrial, commercial, and infrastructure applications. From control panels to power distribution panels, every unit is engineered for safety, durability, and performance with quality components and clean panel wiring standards.",
-    subServices: ["Control Panels", "Power Distribution Panels", "Motor Control Panels (MCC)", "APFC Panels", "PLC Panels", "Panel Installation & Testing"],
+    image: alcoCompositPanal,
+    title: "Alco composit panal",
+    shortDesc: "ACP cladding and panel solutions for stylish, durable interior and exterior finishes",
+    fullDesc: "We provide Alco composit panal solutions for storefronts, building facades, office exteriors, and interior feature surfaces. Our team handles panel selection, precision cutting, framing, and clean installation to deliver a modern finish that is lightweight, weather-resistant, and built to last.",
+    subServices: ["ACP Sheet Cladding", "Exterior Facade Panels", "Shop Front ACP Work", "Sign Board Back Panels", "Interior Wall Cladding", "Panel Fabrication & Installation"],
     process: [
-      { step: "Requirement Study", desc: "Understanding load, application, standards, and site conditions before design." },
-      { step: "Panel Design", desc: "Preparing SLD/layout, selecting components, and defining safety protections." },
-      { step: "Assembly & Wiring", desc: "Precision fabrication, busbar mounting, and structured wiring with labeling." },
-      { step: "Testing & Commissioning", desc: "Pre-dispatch testing, on-site installation, and commissioning support." },
+      { step: "Site Measurement", desc: "We inspect the location, take dimensions, and understand the finish and structural requirements." },
+      { step: "Design & Material Selection", desc: "Choosing ACP colors, thickness, framing method, and layout based on your space and branding." },
+      { step: "Cutting & Fabrication", desc: "Panels are accurately cut, grooved, and prepared for neat bends, joints, and edge finishes." },
+      { step: "Installation & Finishing", desc: "Our team installs the panels securely with a clean finish, proper alignment, and final quality checks." },
     ],
   },
 ];

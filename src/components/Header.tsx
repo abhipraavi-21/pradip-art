@@ -26,7 +26,7 @@ const quoteServiceOptions = [
   "Vinyl Printing",
   "CNC Cutting",
   "LED Sign Boards",
-  "Specialized Electrical Panel",
+  "Alco composit panal",
   "Other",
 ];
 

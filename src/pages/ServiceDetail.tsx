@@ -10,7 +10,8 @@ import serviceDetailBanner from "@/assets/banners/service-detail-banner.jpg";
 
 const ServiceDetail = () => {
   const { slug } = useParams();
-  const service = servicesData.find((s) => s.slug === slug);
+  const normalizedSlug = slug === "specialized-electrical-panel" ? "alco-composit-panal" : slug;
+  const service = servicesData.find((s) => s.slug === normalizedSlug);
 
   if (!service) {
     return (
@@ -131,7 +132,7 @@ const ServiceDetail = () => {
             <h2 className="text-2xl font-extrabold text-foreground mb-8">Other Services</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {servicesData
-                .filter((s) => s.slug !== slug)
+                .filter((s) => s.slug !== normalizedSlug)
                 .slice(0, 3)
                 .map(({ slug: s, icon: SIcon, title, shortDesc }) => (
                   <Link key={s} to={`/services/${s}`} className="bg-card border border-border rounded-lg p-6 hover-lift group">

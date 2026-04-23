@@ -10,25 +10,13 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBanner from "@/components/PageBanner";
 import contactBanner from "@/assets/banners/contact-banner.jpg";
+import { serviceSelectOptions } from "@/data/services";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
   { icon: Mail, label: "Email", value: "info@pradiparts.com", href: "mailto:info@pradiparts.com" },
   { icon: MapPin, label: "Address", value: "123 Industrial Area, Andheri East, Mumbai 400069, India" },
   { icon: Clock, label: "Hours", value: "Mon - Sat: 9:00 AM - 7:00 PM" },
-];
-
-const serviceOptions = [
-  "Large Format Printing",
-  "Signage",
-  "Wall Graphics",
-  "Branding Solutions",
-  "Flex Printing",
-  "Vinyl Printing",
-  "CNC Cutting",
-  "LED Sign Boards",
-  "Alco composit panal",
-  "Other",
 ];
 
 const Contact = () => {
@@ -102,7 +90,7 @@ const Contact = () => {
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
-                        {serviceOptions.map((s) => (
+                        {serviceSelectOptions.map((s) => (
                           <SelectItem key={s} value={s}>{s}</SelectItem>
                         ))}
                       </SelectContent>

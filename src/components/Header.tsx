@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { serviceSelectOptions } from "@/data/services";
 import { useToast } from "@/hooks/use-toast";
 
 const navLinks = [
@@ -15,19 +16,6 @@ const navLinks = [
   { label: "Services", to: "/services" },
   { label: "Portfolio", to: "/portfolio" },
   { label: "Contact", to: "/contact" },
-];
-
-const quoteServiceOptions = [
-  "Large Format Printing",
-  "Signage",
-  "Wall Graphics",
-  "Branding Solutions",
-  "Flex Printing",
-  "Vinyl Printing",
-  "CNC Cutting",
-  "LED Sign Boards",
-  "Alco composit panal",
-  "Other",
 ];
 
 const emptyQuoteForm = {
@@ -167,7 +155,7 @@ const Header = () => {
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  {quoteServiceOptions.map((service) => (
+                  {serviceSelectOptions.map((service) => (
                     <SelectItem key={service} value={service}>
                       {service}
                     </SelectItem>

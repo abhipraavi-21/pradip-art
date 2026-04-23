@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import BrandLogo from "@/components/BrandLogo";
+import { serviceTitles } from "@/data/services";
 
 const Footer = () => (
   <footer className="gradient-navy text-primary-foreground">
@@ -35,7 +36,7 @@ const Footer = () => (
         <div>
           <h4 className="text-lg font-semibold mb-3">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            {["Large Format Printing", "Signage", "Wall Graphics", "Vinyl Printing", "CNC Cutting", "LED Sign Boards", "Alco composit panal"].map((s) => (
+            {serviceTitles.map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>

@@ -10,7 +10,13 @@ import serviceDetailBanner from "@/assets/banners/service-detail-banner.jpg";
 
 const ServiceDetail = () => {
   const { slug } = useParams();
-  const normalizedSlug = slug === "specialized-electrical-panel" ? "alco-composit-panal" : slug;
+  const slugAliases: Record<string, string> = {
+    "specialized-electrical-panel": "acp-paneling-sign-board",
+    "alco-composit-panal": "acp-paneling-sign-board",
+    "led-sign-boards": "led-sign-board",
+    "cnc-cutting": "cnc-cutting-work",
+  };
+  const normalizedSlug = slug ? slugAliases[slug] ?? slug : slug;
   const service = servicesData.find((s) => s.slug === normalizedSlug);
 
   if (!service) {
